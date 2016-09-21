@@ -1,13 +1,21 @@
 {
-    "title": "Header",
+    "title": "User",
     "desciption": "",
     "pageType": "view",
-    "fields": [{
+    "fields": [
+      {
         "name": "Name",
-        "type":"text",
         "isSort": "",
         "tableRef": "name"
-    }, {
+    },{
+      "name": "Email",
+      "isSort": "",
+      "tableRef": "email"
+  },{
+      "name": "Mobile",
+      "isSort": "",
+      "tableRef": "mobile"
+  },{
         "name": "Image",
         "type": "image",
         "isSort": "",
@@ -18,25 +26,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editHeader",
+        "jsonPage": "editUser",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Header/getone"
+        "callFindOne": "User/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Header",
-        "content": "Are you sure you want to delete Header?",
-        "api": "Header/delete",
+        "title": "Delete Tag",
+        "content": "Are you sure you want to delete User?",
+        "api": "User/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Header/getLimited",
+        "url": "User/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createHeader'})"
+    "createButtonState": "page({jsonName:'createTestimonial'})"
 }

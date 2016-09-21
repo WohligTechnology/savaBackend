@@ -1,5 +1,4 @@
-var adminurl = "http://104.154.89.21:86/";
-var adminurl = "http://localhost:1338/";
+var adminurl = "http://localhost:1337/";
 // var adminurl = "http://192.168.0.111:1337/";
 //var adminurl = "http://192.168.1.116:1337/";
 var uploadurl = adminurl + "upload/";
@@ -8,62 +7,11 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
     var navigation = [{
-        name: "Slider",
+        name: "User",
         classis: "active",
-        link: "#/page/viewSlider",
+        link: "#/page/viewUser",
         subnav: []
-    },{
-        name: "Header Banner",
-        classis: "active",
-        link: "#/page/viewHeader",
-        subnav: []
-    }, {
-        name: "Category",
-        classis: "active",
-        link: "#/page/viewCategory",
-        subnav: []
-    }, {
-        name: "Sub-Category",
-        classis: "active",
-        link: "#/page/viewSubCategory",
-        subnav: []
-    }, {
-        name: "Doctor",
-        classis: "active",
-        link: "#/page/viewDoctor",
-        subnav: []
-    }, {
-        name: "Blog",
-        classis: "active",
-        link: "#/page/viewBlog",
-        subnav: []
-    }, {
-        name: "Tags",
-        classis: "active",
-        link: "#/page/viewTags",
-        subnav: []
-    }, {
-        name: "Testimonial",
-        classis: "active",
-        link: "#/page/viewTestimonial",
-        subnav: []
-    }, {
-        name: "Media",
-        classis: "active",
-        link: "#/page/viewMedia",
-        subnav: []
-    }, {
-        name: "Before After",
-        classis: "active",
-        link: "#/page/viewBeforeAfter",
-        subnav: []
-    },
-    {
-       name: "Subscribe",
-       classis: "active",
-       link: "#/page/viewSubscribe",
-       subnav: []
-   }];
+    }];
 
     return {
         getnav: function() {

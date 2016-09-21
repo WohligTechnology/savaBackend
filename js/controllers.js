@@ -265,11 +265,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     // $scope.json.createButtonState = $scope.json.createButtonState.split("%25A2").join("%A2");
                 }
                 console.log($scope.json.createButtonState);
-                $scope.api1 = $scope.json.sidemenu[1].callFindOne;
-                if ($scope.json.sidemenu[1].sendParam && $scope.json.sidemenu[1].sendParam !== '') {
+                // $scope.api1 = $scope.json.sidemenu[1].callFindOne;
+                // if ($scope.json.sidemenu[1].sendParam && $scope.json.sidemenu[1].sendParam !== '') {
                     // ARRAY
                     // $scope.pagination1._id = urlid1;
-                    $scope.pagination1._id = urlid1;
+                    // $scope.pagination1._id = urlid1;
                     // NavigationService.sideMenu1($scope.api1, $scope.pagination1, function(data) {
                     //     if (data.data.nominee) {
                     //         $scope.json.tableData = data.data;
@@ -279,7 +279,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     // }, function() {
                     //     console.log("fail");
                     // });
-                } else {
+                // } else {
                     console.log("ELSE");
                     $scope.pagination._id = urlid1;
                     // NavigationService.sideMenu1($scope.api1, $scope.pagination, function(data) {
@@ -288,7 +288,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     // }, function() {
                     //     console.log("fail");
                     // });
-                }
+                // }
             }
             // call api for view data
             $scope.apiName = $scope.json.apiCall.url;
@@ -307,11 +307,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     NavigationService.findProjects($scope.apiName, $scope.pagination, function(findData) {
                         console.log(findData);
                         if (findData.value !== false) {
-                            if (findData.data && findData.data.data && findData.data.data.length > 0) {
+                            if (findData.data && findData.data.results && findData.data.results.length > 0) {
                                 $scope.pageInfo.lastpage = findData.data.totalpages;
                                 $scope.pageInfo.pagenumber = findData.data.pagenumber;
                                 $scope.pageInfo.totalitems = $scope.pagination.pagesize * findData.data.totalpages;
-                                $scope.json.tableData = findData.data.data;
+                                $scope.json.tableData = findData.data.results;
                             } else {
                                 $scope.json.tableData = [];
                             }
