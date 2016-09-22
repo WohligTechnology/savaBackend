@@ -1,0 +1,113 @@
+{
+    "title": "Edit Loyalty Details",
+    "jsonPage": "viewLoyalty",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Id",
+        "type": "hidden",
+        "tableRef": "_id",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "_id"
+    },{
+        "name": "Programme Name",
+        "type": "text",
+        "tableRef": "programmeName",
+        "placeholder": "Enter Progamme Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "programmeName"
+    }, {
+        "name": "Buisness Programme",
+        "type": "text",
+        "tableRef": "buisnessProgramme",
+        "placeholder": "Enter Buisness Programme",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "buisnessProgramme"
+    }, {
+        "name": "To Issue",
+        "type": "text",
+        "tableRef": "toIssue",
+        "placeholder": "Enter to issue",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "toIssue"
+    }, {
+        "name": "Number of Employee",
+        "type": "text",
+        "tableRef": "numberOfEmployee",
+        "placeholder": "Enter Number Of Employee",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "numberOfEmployee"
+    }, {
+        "name": "Reward",
+        "type": "text",
+        "tableRef": "conversionRate.reward",
+        "placeholder": "Enter reward",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "conversionRate.reward"
+    }, {
+        "name": "Currency",
+        "type": "text",
+        "tableRef": "conversionRate.currency",
+        "placeholder": "Enter Currency",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "conversionRate.currency"
+    }, {
+        "name": "Rate",
+        "type": "text",
+        "tableRef": "conversionRate.rate",
+        "placeholder": "Enter rate",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "conversionRate.rate"
+    }, {
+        "name": "Total reward",
+        "type": "text",
+        "tableRef": "totalReward",
+        "placeholder": "Enter total reward",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "totalReward"
+    }, {
+        "name": "Points or Stamps",
+        "type": "text",
+        "tableRef": "offer.pointsOrStamps",
+        "placeholder": "Enter Town",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "offer.pointsOrStamps"
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitLoyalty"
+    }, {
+        "name": "cancel",
+        "action": "cancelLoyalty",
+        "stateName": "page({jsonName:'viewLoyalty'})"
+    }],
+    "apiCall": {
+        "url": "Loyalty/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Loyalty/getOne",
+        "params": "_id"
+    }
+}

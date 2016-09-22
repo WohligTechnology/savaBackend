@@ -37,6 +37,12 @@
                     <md-option ng-repeat="item in field.url" value="{{item.value}}" ng-if="item">{{item.name}}</md-option>
                 </md-select>
             </div>
+            <div ng-if="field.type=='select' && field.option=='multiple' && field.option" >
+                <label>{{field.name}}</label>
+                <md-select ng-model="json.editData[field.model]" multiple>
+                    <md-option ng-repeat="item in field.url" value="{{item.value}}" ng-if="item">{{item.name}}</md-option>
+                </md-select>
+            </div>
             <div ng-if="field.type=='textarea'">
                 <label>{{field.name}}</label>
                 <textarea style="height:100px;" ng-model="json.editData[field.model]" name="{{field.name}}" id="{{field.id}}"></textarea>

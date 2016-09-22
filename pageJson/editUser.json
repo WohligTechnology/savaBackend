@@ -8,20 +8,11 @@
         "name": "Id",
         "type": "hidden",
         "tableRef": "_id",
-        "placeholder": "Enter name",
+        "placeholder": "Id",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "_id"
-    },{
-        "name": "Title",
-        "type": "text",
-        "tableRef": "title",
-        "placeholder": "Enter Title",
-        "id": "input2",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "title"
     },{
         "name": "Full Name",
         "type": "text",
@@ -51,18 +42,27 @@
         "model": "mobile"
     },{
         "name": "Gender",
-        "type": "text",
+        "type": "select",
         "tableRef": "gender",
-        "placeholder": "Enter Gender",
+        "placeholder": "Select Gender",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
-        "url": "",
+        "url": [{
+            "value" : "Male",
+            "name" : "Male"
+        },{
+            "value" : "Female",
+            "name" : "Female"
+        },{
+            "value" : "Other",
+            "name" : "Other"
+        }],
         "model": "gender"
     },{
         "name": "DOB",
         "type": "date",
         "tableRef": "dob",
-        "placeholder": "Enter DOB",
+        "placeholder": "Enter Date of birth",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
@@ -70,78 +70,78 @@
     },{
         "name": "Address1",
         "type": "text",
-        "tableRef": "address_address1",
+        "tableRef": "address1",
         "placeholder": "Enter Address1",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_address1"
+        "model": "address1"
     },{
         "name": "Address2",
         "type": "text",
-        "tableRef": "address_address2",
+        "tableRef": "address2",
         "placeholder": "Enter Address2",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_address2"
+        "model": "address2"
     },{
         "name": "Town",
         "type": "text",
-        "tableRef": "address_town",
+        "tableRef": "town",
         "placeholder": "Enter Town",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_town"
+        "model": "town"
     },{
         "name": "City",
         "type": "text",
-        "tableRef": "address_city",
+        "tableRef": "city",
         "placeholder": "Enter City",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_city"
+        "model": "city"
     },{
         "name": "Pincode",
         "type": "Number",
-        "tableRef": "address_pincode",
+        "tableRef": "pincode",
         "placeholder": "Enter Pincode",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_pincode"
+        "model": "pincode"
     },{
         "name": "Country",
         "type": "text",
-        "tableRef": "address_country",
+        "tableRef": "country",
         "placeholder": "Enter Country",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_country"
+        "model": "country"
     },{
         "name": "Latitude",
         "type": "text",
-        "tableRef": "address_lat",
+        "tableRef": "lat",
         "placeholder": "Enter Latitude",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_lat"
+        "model": "lat"
     },{
         "name": "Longitude",
         "type": "text",
-        "tableRef": "address_lng",
+        "tableRef": "lng",
         "placeholder": "Enter Longitude",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "address_lng"
+        "model": "lng"
     },{
       "name": "Dietary Needs",
-      "type": "chips",
+      "type": "text",
       "tableRef": "dietaryNeeds",
       "placeholder": "Enter Dietary Needs",
       "id": "input4",
@@ -175,6 +175,17 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "googleID"
+    },{
+        "name": "Favourite branch",
+        "type": "selectFromTable",
+        "option":"multiple",
+        "dropDownName": "branchName",
+        "tableRef": "BranchRegistration",
+        "placeholder": "Select favourite branch",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "BranchRegistration/search",
+        "model": "BranchRegistration"
     }],
     "action": [{
         "name": "submit",
@@ -182,7 +193,7 @@
     }, {
         "name": "cancel",
         "action": "cancelUser",
-        "stateName": "page({jsonName:'userView'})"
+        "stateName": "page({jsonName:'viewUser'})"
     }],
     "apiCall": {
         "url": "User/save",
@@ -191,24 +202,5 @@
     "preApi": {
         "url": "User/getOne",
         "params": "_id"
-    },
-    "sidemenu": [{
-          "name": "User",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editUser",
-          "fieldsToSend": [1],
-          "callFindOne": "User/getOne"
-      }, {
-          "name": "House Hold",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewhouseHold",
-          "fieldsToSend": [1],
-          "callFindOne": "User/search"
-      }, {
-          "name": "Favorites",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewfavorites",
-          "fieldsToSend": [1],
-          "callFindOne": "User/search"
-      }]
+    }
 }

@@ -1,46 +1,49 @@
 {
-    "title": "Testimonial",
+    "title": "Employee",
     "desciption": "",
     "pageType": "view",
-    "sortable":"Testimonial/sort",
     "fields": [{
-        "name": "Name",
-        "isSort": "",
-        "tableRef": "name"
-    },{
-        "name": "Tag Name",
-        "isSort": "",
-        "tableRef": "tags.name"
-    },{
         "name": "Image",
-        "type": "image",
         "isSort": "",
-        "tableRef": "image"
+        "tableRef": "image",
+        "type": "image"
+    }, {
+        "name": "First Name",
+        "isSort": "",
+        "tableRef": "firstName"
+    }, {
+        "name": "Last Name",
+        "isSort": "",
+        "tableRef": "lastName"
+    }, {
+        "name": "Email",
+        "isSort": "",
+        "tableRef": "email"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editTestimonial",
+        "jsonPage": "editEmployee",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Testimonial/getone"
+        "callFindOne": "Employee/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
         "title": "Delete Tag",
-        "content": "Are you sure you want to delete Testimonial?",
-        "api": "Testimonial/delete",
+        "content": "Are you sure you want to delete User?",
+        "api": "Employee/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Testimonial/getLimited",
+        "url": "Employee/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createTestimonial'})"
+    "createButtonState": "page({jsonName:'createEmployee'})"
 }

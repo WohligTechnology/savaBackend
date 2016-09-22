@@ -16,12 +16,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         // });
         NavigationService.submitLogin(user, function(data) {
             // console.log(data);
-            // $state.go("page", {
-            //         jsonName: "viewBlog"
-            // });
             if (data.value === true) {
                 $state.go("page", {
-                    jsonName: "viewBlog"
+                    jsonName: "viewBranchRegistration"
                 });
                 $.jStorage.set("user", data);
             } else if (data.value === false) {
@@ -172,7 +169,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     }
                 } else if (n.type == "selectFromTable") {
                     n.model = "";
-                }
+                }   
             });
             // get select fields dropdown
             _.each($scope.json.fields, function(n) {
@@ -181,13 +178,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                         console.log(data);
                         n.dropdownvalues = [];
                         if (data) {
-                            for (var i = 0; i < data.data.length; i++) {
+                            for (var i = 0; i < data.data.results.length; i++) {
                                 var dropdown = {};
-                                dropdown._id = data.data[i]._id;
+                                dropdown._id = data.data.results[i]._id;
                                 if (!n.dropDownName) {
-                                    dropdown.name = data.data[i].name;
+                                    dropdown.name = data.data.results[i].name;
                                 } else {
-                                    dropdown.name = data.data[i][n.dropDownName];
+                                    dropdown.name = data.data.results[i][n.dropDownName];
                                 }
                                 n.dropdownvalues.push(dropdown);
                             }
@@ -223,13 +220,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                         console.log(data);
                         n.dropdownvalues = [];
                         if (data) {
-                            for (var i = 0; i < data.data.length; i++) {
+                            for (var i = 0; i < data.data.results.length; i++) {
                                 var dropdown = {};
-                                dropdown._id = data.data[i]._id;
+                                dropdown._id = data.data.results[i]._id;
                                 if (!n.dropDownName) {
-                                    dropdown.name = data.data[i].name;
+                                    dropdown.name = data.data.results[i].results.name;
                                 } else {
-                                    dropdown.name = data.data[i][n.dropDownName];
+                                    dropdown.name = data.data.results[i][n.dropDownName];
                                 }
                                 n.dropdownvalues.push(dropdown);
                             }

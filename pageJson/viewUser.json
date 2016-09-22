@@ -2,8 +2,7 @@
     "title": "User",
     "desciption": "",
     "pageType": "view",
-    "fields": [
-      {
+    "fields": [{
         "name": "Name",
         "isSort": "",
         "tableRef": "name"
@@ -16,10 +15,9 @@
       "isSort": "",
       "tableRef": "mobile"
   },{
-        "name": "Image",
-        "type": "image",
+        "name": "City",
         "isSort": "",
-        "tableRef": "image"
+        "tableRef": "city"
     }],
     "action": [{
         "name": "edit",
@@ -28,7 +26,7 @@
         "action": "redirect",
         "jsonPage": "editUser",
         "fieldsToSend": ["_id"],
-        "callFindOne": "User/getone"
+        "callFindOne": "User/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -46,5 +44,5 @@
         "url": "User/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createTestimonial'})"
+    "createButtonState": "page({jsonName:'createUser'})"
 }
