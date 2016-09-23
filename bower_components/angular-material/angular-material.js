@@ -56,12 +56,38 @@ function MdCoreConfigure($provide, $mdThemingProvider) {
 
   $provide.decorator('$$rAF', ["$delegate", rAFDecorator]);
 
+var customWarn = {
+        '50': '#ffffff',
+        '100': '#ffffff',
+        '200': '#ffffff',
+        '300': '#ffffff',
+        '400': '#ffffff',
+        '500': '#ffffff',
+        '600': '#f2f2f2',
+        '700': '#e6e6e6',
+        '800': '#d9d9d9',
+        '900': '#cccccc',
+        'A100': '#ffffff',
+        'A200': '#ffffff',
+        'A400': '#ffffff',
+        'A700': '#bfbfbf'
+    };
+    $mdThemingProvider
+        .definePalette('customWarn', 
+                        customWarn);
+
   $mdThemingProvider.theme('default')
-    .primaryPalette('indigo')
+    .primaryPalette('light-blue')
     .accentPalette('pink')
-    .warnPalette('deep-orange')
+    .warnPalette('customWarn')
     .backgroundPalette('grey');
 }
+//   $mdThemingProvider.theme('default')
+//     .primaryPalette('indigo')
+//     .accentPalette('pink')
+//     .warnPalette('deep-orange')
+//     .backgroundPalette('grey');
+// }
 
 /**
  * @ngInject
@@ -5116,7 +5142,7 @@ angular.module('material.core.theming.palette', [])
     'A200': '#40c4ff',
     'A400': '#00b0ff',
     'A700': '#0091ea',
-    'contrastDefaultColor': 'dark',
+    'contrastDefaultColor': 'light',
     'contrastLightColors': '600 700 800 900 A700',
     'contrastStrongLightColors': '600 700 800 A700'
   },

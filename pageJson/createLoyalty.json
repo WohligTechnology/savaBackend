@@ -76,9 +76,9 @@
         "url": ""
     }, {
         "name": "Points or Stamps",
-        "type": "text",
-        "tableRef": "offer.pointsOrStamps",
-        "placeholder": "Enter Town",
+        "type": "chips",
+        "tableRef": "offer",
+        "placeholder": "Enter points or stamps",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": ""

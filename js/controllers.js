@@ -224,10 +224,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                                 var dropdown = {};
                                 dropdown._id = data.data.results[i]._id;
                                 if (!n.dropDownName) {
-                                    dropdown.name = data.data.results[i].results.name;
+                                    dropdown.name = data.data.results[i].name;
                                 } else {
                                     dropdown.name = data.data.results[i][n.dropDownName];
-                                }
+                                    }
                                 n.dropdownvalues.push(dropdown);
                             }
                         }

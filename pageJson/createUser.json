@@ -124,6 +124,24 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": ""
+    // },{
+    //     "name": "House hold name",
+    //     "type": "text",
+    //     "tableRef": "houseHold.name",
+    //     "placeholder": "Enter house hold name",
+    //     "id": "input4",
+    //     "validation": ["required", "trim", "unique"],
+    //     "url": "",
+    //     "model": "houseHold.name"
+    // },{
+    //     "name": "House hold age",
+    //     "type": "text",
+    //     "tableRef": "houseHold.age",
+    //     "placeholder": "Enter house hold age",
+    //     "id": "input4",
+    //     "validation": ["required", "trim", "unique"],
+    //     "url": "",
+    //     "model": "houseHold.age"
     },{
       "name": "Dietary Needs",
       "type": "text",
@@ -161,12 +179,12 @@
         "type": "selectFromTable",
         "option":"single",
         "dropDownName": "branchName",
-        "tableRef": "BranchRegistration",
+        "tableRef": "favBranch",
         "placeholder": "Select favourite branch",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "BranchRegistration/search",
-        "model": "BranchRegistration"
+        "model": "favBranch"
     }],
     "action": [{
         "name": "submit",

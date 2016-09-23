@@ -92,24 +92,24 @@
         "name": "Role",
         "type": "selectFromTable",
         "option": "single",
-        "tableRef": "BranchRegistration",
+        "tableRef": "role",
         "placeholder": "Select Role",
         "dropDownName": "branchName",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "BranchRegistration/search",
-        "model": "BranchRegistration"
+        "model": "role"
     }, {
         "name": "Branch",
         "type": "selectFromTable",
         "option": "single",
-        "tableRef": "BranchRegistration",
+        "tableRef": "branch",
         "placeholder": "Select branch",
         "id": "input3",
         "dropDownName": "branchName",
         "validation": ["required", "trim", "unique"],
         "url": "BranchRegistration/search",
-        "model": "BranchRegistration"
+        "model": "branch"
     }],
     "action": [{
         "name": "submit",
