@@ -86,13 +86,13 @@
         "model": "totalReward"
     }, {
         "name": "Points or Stamps",
-        "type": "text",
-        "tableRef": "offer.pointsOrStamps",
-        "placeholder": "Enter Town",
+        "type": "chips",
+        "tableRef": "offer",
+        "placeholder": "Enter Points or stamps",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "offer.pointsOrStamps"
+        "model": "offer"
     }],
     "action": [{
         "name": "submit",

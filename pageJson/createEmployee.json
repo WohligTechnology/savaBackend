@@ -1,5 +1,5 @@
 {
-    "title": "Create Branch Registration",
+    "title": "Create Employee Details",
     "jsonPage": "viewEmployee",
     "desciption": "",
     "pageType": "create",
@@ -82,23 +82,23 @@
     }, {
         "name": "Role",
         "type": "selectFromTable",
-        "tableRef": "BranchRegistration",
+        "tableRef": "role",
         "placeholder": "Select Role",
         "dropDownName": "branchName",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "BranchRegistration/search",
-        "model": "BranchRegistration"
+        "model": "role"
     }, {
         "name": "Branch",
         "type": "selectFromTable",
-        "tableRef": "BranchRegistration",
+        "tableRef": "branch",
         "placeholder": "Select branch",
         "dropDownName": "branchName",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "BranchRegistration/search",
-        "model": "BranchRegistration"
+        "model": "branch"
     }],
     "action": [{
         "name": "submit",
