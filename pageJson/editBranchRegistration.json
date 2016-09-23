@@ -186,5 +186,18 @@
     "preApi": {
         "url": "BranchRegistration/getOne",
         "params": "_id"
-    }
+    },
+    "sidemenu": [{
+          "name": "BranchRegistration",
+          "action": "sidemenuRedirect",
+          "jsonPage": "editBranchRegistration",
+          "fieldsToSend": [1],
+          "callFindOne": "BranchRegistration/getOne"
+      }, {
+          "name": "Hours",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewHours",
+          "fieldsToSend": [1],
+          "callFindOne": "BranchRegistration/getHours"
+      }]
 }

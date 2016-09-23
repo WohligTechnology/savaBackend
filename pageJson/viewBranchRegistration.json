@@ -11,10 +11,6 @@
         "isSort": "",
         "tableRef": "address"
     }, {
-        "name": "Contact Number",
-        "isSort": "",
-        "tableRef": "contactNumber"
-    }, {
         "name": "Number Of Employee",
         "isSort": "",
         "tableRef": "numberOfEmployee"

@@ -1,0 +1,52 @@
+{
+    "title": "View Hours",
+    "desciption": "",
+    "sendIdWithCreate": true,
+    "pageType": "view",
+    "fields": [{
+        "name": "Day Name",
+        "type": "text",
+        "isSort": "",
+        "tableRef": "name"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editHours",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "BranchRegistration/getOneHours"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete Hours",
+        "content": "Are you sure you want to delete Hours?",
+        "api": "BranchRegistration/deleteHours",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "apiCall": {
+        "url": "BranchRegistration/getHours",
+        "params": ""
+    },
+    "createButtonState": "page({jsonName:'createHours'})",
+    "sidemenu": [{
+          "name": "BranchRegistration",
+          "action": "sidemenuRedirect",
+          "jsonPage": "editBranchRegistration",
+          "fieldsToSend": [1],
+          "callFindOne": "BranchRegistration/getOne"
+      }, {
+          "name": "Hours",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewHours",
+          "fieldsToSend": [1],
+          "callFindOne": "BranchRegistration/getOne"
+      }]
+
+}
