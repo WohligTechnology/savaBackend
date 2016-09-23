@@ -39,7 +39,7 @@
         "url": "BranchRegistration/getTime",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createHours'})",
+    "createButtonState": "page({jsonName:'createTime'})",
     "sidemenu": [{
           "name": "BranchRegistration",
           "action": "sidemenuRedirect",
