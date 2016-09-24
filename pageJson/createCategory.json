@@ -14,6 +14,7 @@
     },{
         "name": "Status",
         "type": "select",
+        "option":"single",
         "tableRef": "status",
         "placeholder": "Select status",
         "id": "input3",

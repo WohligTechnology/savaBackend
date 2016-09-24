@@ -13,7 +13,7 @@
         "url": "",
         "model": "_id"
     }, {
-        "name": "Offer type",
+        "name": "Offer Type [Promotional/Redemptional]",
         "type": "text",
         "tableRef": "offerType",
         "placeholder": "Enter offer type",
@@ -26,7 +26,7 @@
         "type": "text",
         "tableRef": "loyaltyProgramName",
         "placeholder": "Enter loyalty program name",
-        "id": "input2", 
+        "id": "input2",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "loyaltyProgramName"
@@ -49,7 +49,7 @@
         "url": "",
         "model": "basis"
     }, {
-        "name": "For every",
+        "name": "For every Visit",
         "type": "text",
         "tableRef": "forEvery",
         "placeholder": "Enter for Every",
@@ -151,6 +151,7 @@
     }, {
         "name": "is Redemption Offer",
         "type": "select",
+        "option":"single",
         "tableRef": "isRedemptionOffer",
         "placeholder": "Enter is Redemption Offer",
         "id": "input4",
@@ -184,9 +185,10 @@
     }, {
         "name": "Valid On",
         "type": "select",
+        "option":"single",
         "tableRef": "validOn",
         "option":"multiple",
-        "id": "input2", 
+        "id": "input2",
         "validation": ["required", "trim", "unique"],
         "model": "validOn",
         "url": [{
@@ -268,6 +270,7 @@
     }, {
         "name": "Sex",
         "type": "select",
+        "option":"single",
         "tableRef": "sex",
         "id": "input3",
         "validation": ["required", "trim", "unique"],

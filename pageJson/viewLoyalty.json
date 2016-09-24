@@ -3,21 +3,17 @@
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "Programme Name",
-        "isSort": "",
-        "tableRef": "programmeName"
-    }, {
         "name": "Business Programme",
         "isSort": "",
         "tableRef": "buisnessProgramme"
     }, {
-        "name": "Reward",
+        "name": "To Issue",
         "isSort": "",
-        "tableRef": "reward"
+        "tableRef": "toIssue"
     }, {
-        "name": "Number Of Employee",
+        "name": "Total Reward",
         "isSort": "",
-        "tableRef": "numberOfEmployee"
+        "tableRef": "totalReward"
     }],
     "action": [{
         "name": "edit",

@@ -115,6 +115,7 @@
     }, {
         "name": "Collection",
         "type": "select",
+        "option":"single",
         "tableRef": "collections",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
@@ -129,6 +130,7 @@
     }, {
         "name": "Type of appointment",
         "type": "select",
+        "option":"single",
         "tableRef": "typeOfAppoinment",
         "id": "input4",
         "validation": ["required", "trim", "unique"],

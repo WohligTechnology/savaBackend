@@ -25,6 +25,7 @@
     }, {
         "name": "Title",
         "type": "select",
+        "option":"single",
         "tableRef": "title",
         "placeholder": "Select title ",
         "id": "input2",
@@ -142,43 +143,22 @@
         "model": "lng"
     }, {
         "name": "Question",
-        "type": "select",
-        "tableRef": "securityQuestion.question",
+        "type": "text",
+        "tableRef": "question",
         "placeholder": "Select Question",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
-        "model": "securityQuestion.question",
-        "url": [{
-            "value" : "A",
-            "name" : "A"
-        },{
-            "value" : "B",
-            "name" : "B"
-        },{
-            "value" : "C",
-            "name" : "C"
-        },{
-            "value" : "D",
-            "name" : "D"
-        },{
-            "value" : "E",
-            "name" : "E"
-        },{
-            "value" : "F",
-            "name" : "F"
-        },{
-            "value" : "G",
-            "name" : "G"
-        }]
+        "model": "question",
+        "url":""
     }, {
         "name": "Answer",
         "type": "text",
-        "tableRef": "securityQuestion.answer",
+        "tableRef": "answer",
         "placeholder": "Enter Answer",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "securityQuestion.answer"
+        "model": "answer"
     }, {
         "name": "Buisness Name",
         "type": "text",
@@ -197,14 +177,13 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "mobile"
-    }, {
+    },  {
         "name": "Buisness Type",
         "type": "selectFromTable",
         "tableRef": "buisnessType",
-        "option": "single",
+        "option":"single",
         "placeholder": "Select business type",
         "id": "input3",
-        "dropDownName" : "name",
         "validation": ["required", "trim", "unique"],
         "url": "Category/search",
         "model": "buisnessType"

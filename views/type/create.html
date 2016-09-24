@@ -28,7 +28,7 @@
                     </md-select>
                 </div> -->
 
-            <div ng-if="field.type=='select'">
+            <div ng-if="field.type=='select' && field.option=='single'">
                 <label>{{field.name}}</label>
                 <md-select ng-model="field.model">
                     <md-option ng-repeat="item in field.url" value="{{item.value}}">{{item.name}}</md-option>

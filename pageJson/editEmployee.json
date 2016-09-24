@@ -70,10 +70,12 @@
     }, {
         "name": "Roles",
         "type": "select",
+        "option":"single",
         "tableRef": "roles",
         "placeholder": "Select roles",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
+        "model":"roles",
         "url": [{
             "value": "CEO",
             "name": "CEO"
@@ -86,20 +88,8 @@
         }, {
             "value": "APM",
             "name": "APM"
-        }],
-        "model": "roles"
-    }, {
-        "name": "Role",
-        "type": "selectFromTable",
-        "option": "single",
-        "tableRef": "role",
-        "placeholder": "Select Role",
-        "dropDownName": "branchName",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": "BranchRegistration/search",
-        "model": "role"
-    }, {
+        }]
+    },{
         "name": "Branch",
         "type": "selectFromTable",
         "option": "single",

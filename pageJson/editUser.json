@@ -43,6 +43,7 @@
     },{
         "name": "Gender",
         "type": "select",
+        "option":"single",
         "tableRef": "gender",
         "placeholder": "Select Gender",
         "id": "input3",
@@ -141,7 +142,7 @@
         "model": "lng"
     },{
       "name": "Dietary Needs",
-      "type": "text",
+      "type": "chips",
       "tableRef": "dietaryNeeds",
       "placeholder": "Enter Dietary Needs",
       "id": "input4",
@@ -202,5 +203,18 @@
     "preApi": {
         "url": "User/getOne",
         "params": "_id"
-    }
+    },
+    "sidemenu": [{
+          "name": "User",
+          "action": "sidemenuRedirect",
+          "jsonPage": "editUser",
+          "fieldsToSend": [1],
+          "callFindOne": "User/getOne"
+      }, {
+          "name": "HouseHold",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewHouseHold",
+          "fieldsToSend": [1],
+          "callFindOne": "User/getHouseHold"
+      }]
 }
