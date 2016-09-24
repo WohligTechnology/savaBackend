@@ -9,10 +9,10 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Image",
-        "type": "image",
+        "name": "Status",
+        "type": "text",
         "isSort": "",
-        "tableRef": "image"
+        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",
@@ -21,7 +21,7 @@
         "action": "redirect",
         "jsonPage": "editCategory",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Category/getone"
+        "callFindOne": "Category/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -36,7 +36,7 @@
         }]
     }],
     "apiCall": {
-        "url": "Category/getLimited",
+        "url": "Category/search",
         "params": ""
     },
     "createButtonState": "page({jsonName:'createCategory'})"

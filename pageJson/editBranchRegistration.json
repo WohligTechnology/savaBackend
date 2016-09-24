@@ -61,6 +61,7 @@
         "name": "Photo",
         "type": "image",
         "tableRef": "photo",
+        "model": "photo",
         "option": "multiple",
         "placeholder": "Upload Photo",
         "id": "input3",

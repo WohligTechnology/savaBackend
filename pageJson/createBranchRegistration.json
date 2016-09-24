@@ -47,6 +47,7 @@
         "name": "Photo",
         "type": "image",
         "tableRef": "photo",
+        "model": "photo",
         "option": "multiple",
         "placeholder": "Select Photo",
         "id": "input3",
