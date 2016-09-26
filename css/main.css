@@ -195,14 +195,6 @@ md-list-item, md-list-item .md-list-item-inner {
   position: absolute;
   min-height: 48px !important; }
 
-  .word-b{
-  display: inline-block;
-    width: 38px;
-    white-space: nowrap;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
-}
-
 .min-w .md-list-item-inner:before {
   padding: 0px 12px; }
 

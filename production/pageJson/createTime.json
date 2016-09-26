@@ -3,7 +3,7 @@
     "jsonPage": "viewTime",
     "desciption": "",
     "pageType": "create",
-    "urlFields": ["BranchRegistration"],
+    "urlFields": ["BranchHours"],
     "fields": [{
         "name": "From",
         "type": "text",
@@ -30,6 +30,6 @@
     }],
 
     "apiCall": {
-        "url": "BranchRegistration/saveTime"
+        "url": "BranchHours/saveTime"
     }
 }

@@ -21,7 +21,7 @@
         "action": "redirect",
         "jsonPage": "editTime",
         "fieldsToSend": ["_id"],
-        "callFindOne": "BranchRegistration/getOneTime"
+        "callFindOne": "BranchHours/getOneTime"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -29,35 +29,29 @@
         "action": "apiCallConfirm",
         "title": "Delete Time",
         "content": "Are you sure you want to delete Time?",
-        "api": "BranchRegistration/deleteTime",
+        "api": "BranchHours/deleteTime",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "BranchRegistration/getTime",
-        "params": ""
+        "url": "BranchHours/getTime",
+        "params": "_id"
     },
     "createButtonState": "page({jsonName:'createTime'})",
-    "sidemenu": [{
-          "name": "BranchRegistration",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editBranchRegistration",
-          "fieldsToSend": [1],
-          "callFindOne": "BranchRegistration/getOne"
-      }, {
+    "sidemenu": [ {
           "name": "Hours",
           "action": "sidemenuRedirect",
           "jsonPage": "viewHours",
           "fieldsToSend": [1],
-          "callFindOne": "BranchRegistration/getOne"
+          "callFindOne": "BranchHours/getOne"
       },{
         "name": "Time",
         "action": "sidemenuRedirect",
         "jsonPage": "viewTime",
         "fieldsToSend": [1],
-        "callFindOne": "BranchRegistration/getTime"
+        "callFindOne": "BranchHours/getTime"
         }]
 
 }
