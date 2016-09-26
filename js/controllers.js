@@ -169,7 +169,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     }
                 } else if (n.type == "selectFromTable") {
                     n.model = "";
-                }   
+                }
             });
             // get select fields dropdown
             _.each($scope.json.fields, function(n) {

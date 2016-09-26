@@ -5,7 +5,7 @@
     "pageType": "create",
     "fields": [{
         "name": "Branch Name",
-        "type": "hidden",
+        "type": "text",
         "tableRef": "branchName",
         "placeholder": "Enter Branch Name",
         "id": "input1",
@@ -53,33 +53,9 @@
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    }, {
-        "name": "Day",
-        "type": "text",
-        "tableRef": "hours.name",
-        "placeholder": "Enter Day name",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "From",
-        "type": "text",
-        "tableRef": "hours.time.from",
-        "placeholder": "Enter from time",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "To",
-        "type": "text",
-        "tableRef": "hours.time.to",
-        "placeholder": "Enter to time ",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
+    },{
         "name": "Establishment Type",
-        "type": "chips",
+        "type": "text",
         "tableRef": "eastablishmentType",
         "placeholder": "Enter Town",
         "id": "input3",

@@ -1,4 +1,4 @@
-// var adminurl = "http://104.155.129.33:88/";
+var adminurl = "http://104.155.129.33:88/";
 var adminurl = "http://localhost:1337/";
 //var adminurl = "http://192.168.1.116:1337/";
 var uploadurl = adminurl + "upload/";
@@ -12,6 +12,11 @@ var navigationservice = angular.module('navigationservice', [])
         link: "#/page/viewBranchRegistration",
         subnav: []
     }, {
+        name: "Branch Hours",
+        classis: "active",
+        link: "#/page/viewHours",
+        subnav: []
+    },{
         name: "Category",
         classis: "active",
         link: "#/page/viewCategory",

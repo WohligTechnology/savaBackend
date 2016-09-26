@@ -69,37 +69,10 @@
         "url": "",
         "model": "photo"
     }, {
-        "name": "Day",
-        "type": "text",
-        "tableRef": "hours.name",
-        "placeholder": "Enter Day name",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "hours.name"
-    }, {
-        "name": "From",
-        "type": "text",
-        "tableRef": "hours.time.from",
-        "placeholder": "Enter from time",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "hours.time.from"
-    }, {
-        "name": "To",
-        "type": "text",
-        "tableRef": "hours.time.to",
-        "placeholder": "Enter to time ",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "hours.time.to"
-    }, {
         "name": "Establishment Type",
-        "type": "chips",
+        "type": "text",
         "tableRef": "eastablishmentType",
-        "placeholder": "Enter Town",
+        "placeholder": "Enter Type",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": "",
@@ -189,18 +162,5 @@
     "preApi": {
         "url": "BranchRegistration/getOne",
         "params": "_id"
-    },
-    "sidemenu": [{
-          "name": "BranchRegistration",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editBranchRegistration",
-          "fieldsToSend": [1],
-          "callFindOne": "BranchRegistration/getOne"
-      }, {
-          "name": "Hours",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewHours",
-          "fieldsToSend": [1],
-          "callFindOne": "BranchRegistration/getHours"
-      }]
+    }
 }

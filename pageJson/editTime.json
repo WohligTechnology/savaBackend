@@ -39,11 +39,11 @@
         "name": "cancel"
     }],
     "apiCall": {
-        "url": "BranchRegistration/saveTime",
+        "url": "BranchHours/saveTime",
         "params": "_id"
     },
     "preApi": {
-        "url": "BranchRegistration/getOneTime",
+        "url": "BranchHours/getOneTime",
         "params": "_id"
     },
     "createButtonState": "page({jsonName:'createHours'})",
