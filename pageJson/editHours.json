@@ -16,7 +16,7 @@
     },{
         "name": "Branch Name",
         "type": "selectFromTable",
-        "option":"single",
+        "option":"singlePopulate",
         "dropDownName": "branchName",
         "placeholder": "Select branch",
         "id": "input4",

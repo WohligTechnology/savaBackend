@@ -37,7 +37,7 @@
     }],
     "apiCall": {
         "url": "User/getHouseHold",
-        "params": ""
+        "params": "_id"
     },
     "createButtonState": "page({jsonName:'createHouseHold'})",
     "sidemenu": [{
@@ -47,11 +47,10 @@
           "fieldsToSend": [1],
           "callFindOne": "User/getOne"
       }, {
-          "name": "Hours",
+          "name": "House Hold",
           "action": "sidemenuRedirect",
-          "jsonPage": "viewHours",
+          "jsonPage": "viewHouseHold",
           "fieldsToSend": [1],
-          "callFindOne": "User/getOne"
+          "callFindOne": "User/getHouseHold"
       }]
-
 }

@@ -179,18 +179,5 @@
 
     "apiCall": {
         "url": "User/save"
-    },
-    "sidemenu": [{
-          "name": "User",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editUser",
-          "fieldsToSend": [1],
-          "callFindOne": "User/getOne"
-      }, {
-          "name": "HouseHold",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewHouseHold",
-          "fieldsToSend": [1],
-          "callFindOne": "User/getHouseHold"
-      }]
+    }
 }

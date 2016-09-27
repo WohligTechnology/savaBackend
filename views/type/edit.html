@@ -68,7 +68,22 @@
                 </md-select>
               </div>
               <div ng-if="field.option=='single'">
-                <md-select style="margin: 0 !important;" ng-model="json.editData[field.model]">
+                <md-select style="margin: 0 !important;" ng-model="json.editData[field.model]" single>
+                  <md-optgroup>
+                    <md-option ng-repeat="item in field.dropdownvalues track by $index" value="{{item._id}}" ng-selected="{{ item.name.Selected == true }}">{{item.name}}</md-option>
+                  </md-optgroup>
+                </md-select>
+              </div>
+              <div ng-if="field.option=='singlePopulate'">
+                <md-select style="margin: 0 !important;" ng-model="json.editData[field.model]._id">
+                  <md-optgroup>
+                    <md-option ng-repeat="item in field.dropdownvalues track by $index" value="{{item._id}}" ng-selected="{{ item.name.Selected == true }}">{{item.name}}</md-option>
+                  </md-optgroup>
+                </md-select>
+              </div>
+
+              <div ng-if="field.option=='multiplePopulate'">
+                <md-select style="margin: 0 !important;" ng-model="json.editData[field.model]._id" multiple>
                   <md-optgroup>
                     <md-option ng-repeat="item in field.dropdownvalues track by $index" value="{{item._id}}" ng-selected="{{ item.name.Selected == true }}">{{item.name}}</md-option>
                   </md-optgroup>
