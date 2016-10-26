@@ -37,7 +37,7 @@
         "url": ""
     }, {
         "name": "Mobile",
-        "type": "text",
+        "type": "number",
         "tableRef": "mobile",
         "placeholder": "Enter Mobile Number",
         "id": "input3",

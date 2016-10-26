@@ -117,8 +117,7 @@
         "placeholder": "Enter Latitude",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "lat"
+        "url": ""
     }, {
         "name": "Longitude",
         "type": "text",
