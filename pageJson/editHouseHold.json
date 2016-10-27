@@ -24,7 +24,7 @@
         "model": "name"
     },{
         "name": "Age",
-        "type": "text",
+        "type": "number",
         "tableRef": "age",
         "placeholder": "Enter Age",
         "id": "input1",

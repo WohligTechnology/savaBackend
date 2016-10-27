@@ -29,7 +29,7 @@
         "url": ""
     },{
         "name": "Mobile",
-        "type": "text",
+        "type": "number",
         "tableRef": "mobile",
         "placeholder": "Enter Mobile No",
         "id": "input3",
@@ -111,7 +111,7 @@
         "url": ""
     },{
         "name": "Latitude",
-        "type": "text",
+        "type": "latLong",
         "tableRef": "lat",
         "placeholder": "Enter Latitude",
         "id": "input4",
@@ -119,7 +119,7 @@
         "url": ""
     },{
         "name": "Longitude",
-        "type": "text",
+        "type": "latLong",
         "tableRef": "lng",
         "placeholder": "Enter Longitude",
         "id": "input4",

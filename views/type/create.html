@@ -25,7 +25,14 @@
         <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
       </div> -->
             </div>
-
+    <div ng-if="field.type=='latLong'">
+                <label>{{field.name}}</label>
+                <input ng-model="field.model" type="text" name="{{field.name}}" lat-Long id="{{field.id}}">
+                <!-- <div ng-messages="name.$error">
+        <div ng-message="required">This is required.</div>
+        <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+      </div> -->
+            </div>
     
 
 

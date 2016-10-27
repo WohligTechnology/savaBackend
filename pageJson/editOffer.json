@@ -224,7 +224,7 @@
         "model": "location"
     }, {
         "name": "Age greater then",
-        "type": "text",
+        "type": "number",
         "tableRef": "ageGreaterThen",
         "placeholder": "Enter age greater then",
         "id": "input3",
@@ -233,7 +233,7 @@
         "model": "ageGreaterThen"
     }, {
         "name": "Age lower limit",
-        "type": "text",
+        "type": "number",
         "tableRef": "ageLowerLimit",
         "placeholder": "Enter age lower limit",
         "id": "input3",
@@ -242,7 +242,7 @@
         "model": "ageLowerLimit"
     }, {
         "name": "Age upper limit",
-        "type": "text",
+        "type": "number",
         "tableRef": "ageUpperLimit",
         "placeholder": "Enter age upper limit",
         "id": "input3",

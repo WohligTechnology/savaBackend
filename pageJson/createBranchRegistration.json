@@ -37,7 +37,7 @@
         "url": ""
     }, {
         "name": "Number of Employee",
-        "type": "text",
+        "type": "number",
         "tableRef": "numberOfEmployee",
         "placeholder": "Enter Number Of Employee",
         "id": "input3",

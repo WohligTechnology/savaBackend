@@ -106,7 +106,7 @@
         "model": "city"
     }, {
         "name": "Pincode",
-        "type": "text",
+        "type": "number",
         "tableRef": "pincode",
         "option": "multiple",
         "placeholder": "Enter Pincode",
@@ -125,7 +125,7 @@
         "model": "country"
     }, {
         "name": "Latitude",
-        "type": "text",
+        "type": "latLong",
         "tableRef": "lat",
         "placeholder": "Enter Latitude",
         "id": "input3",
@@ -134,7 +134,7 @@
         "model": "lat"
     }, {
         "name": "Longitude",
-        "type": "text",
+        "type": "latLong",
         "tableRef": "lng",
         "placeholder": "Enter Longitude",
         "id": "input3",
@@ -170,7 +170,7 @@
         "model": "buisnessName"
     }, {
         "name": "Mobile",
-        "type": "text",
+        "type": "number",
         "tableRef": "mobile",
         "placeholder": "Enter Mobile Number",
         "id": "input3",
@@ -198,7 +198,7 @@
         "model": "registrationAuthority"
     }, {
         "name": "vatRegistrationNumber",
-        "type": "text",
+        "type": "number",
         "tableRef": "vatRegistrationNumber",
         "placeholder": "Enter Vat Registration Number",
         "id": "input3",

@@ -112,7 +112,7 @@
         "url": ""
     }, {
         "name": "Latitude",
-        "type": "text",
+        "type": "latLong",
         "tableRef": "lat",
         "placeholder": "Enter Latitude",
         "id": "input3",
@@ -120,7 +120,7 @@
         "url": ""
     }, {
         "name": "Longitude",
-        "type": "text",
+        "type": "latLong",
         "tableRef": "lng",
         "placeholder": "Enter Longitude",
         "id": "input3",
@@ -152,7 +152,7 @@
         "url": ""
     }, {
         "name": "Mobile",
-        "type": "text",
+        "type": "number",
         "tableRef": "mobile",
         "placeholder": "Enter Mobile Number",
         "id": "input3",
@@ -178,7 +178,7 @@
         "url": ""
     }, {
         "name": "vatRegistrationNumber",
-        "type": "text",
+        "type": "number",
         "tableRef": "vatRegistrationNumber",
         "placeholder": "Enter Vat Registration Number",
         "id": "input3",
